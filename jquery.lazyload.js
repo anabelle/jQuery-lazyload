@@ -1,6 +1,6 @@
 (function($){
     $.fn.lazyload = function(options){
-        var opts = $.extend(jQuery.fn.lazyload.defaults, options);
+        var opts = $.extend($.fn.lazyload.defaults, options);
         var elements = this;
 
         $(window).bind('scroll', function(e){
