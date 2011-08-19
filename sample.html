@@ -1,0 +1,35 @@
+<html>
+  <head>
+    <style type="text/css">
+      img{height:660px;width:990px;}
+    </style>
+  </head>
+  <body>
+    <img original-src="http://inapcache.boston.com/universal/site_graphics/blogs/bigpicture/berlinwall/bp1.jpg" 
+         src="placeholder.gif" />
+    <noscript><img src="http://inapcache.boston.com/universal/site_graphics/blogs/bigpicture/berlinwall/bp1.jpg"/></noscript>
+    
+    <img original-src="http://inapcache.boston.com/universal/site_graphics/blogs/bigpicture/berlinwall/bp2.jpg"       
+         src="placeholder.gif" />
+    <noscript><img src="http://inapcache.boston.com/universal/site_graphics/blogs/bigpicture/berlinwall/bp2.jpg"/></noscript>
+    
+    <img original-src="http://inapcache.boston.com/universal/site_graphics/blogs/bigpicture/berlinwall/bp4.jpg"           
+         src="placeholder.gif" />
+    <noscript><img src="http://inapcache.boston.com/universal/site_graphics/blogs/bigpicture/berlinwall/bp4.jpg"/></noscript>
+    
+    <img original-src="http://inapcache.boston.com/universal/site_graphics/blogs/bigpicture/berlinwall/bp6.jpg"      
+         src="placeholder.gif" />
+    <noscript><img src="http://inapcache.boston.com/universal/site_graphics/blogs/bigpicture/berlinwall/bp6.jpg"/></noscript>
+    
+    <p>Photos from: <a href="http://www.boston.com/bigpicture/2011/08/remembering_the_divide.html">Remembering the Berlin Wall</a></p>
+    
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+    <script type="text/javascript" src="jquery.lazyload.js"></script>
+    
+    <script type="text/javascript">
+      $(function(){
+        $('img').lazyload({threshold: 100});
+      });
+    </script>
+  </body>
+</html>
