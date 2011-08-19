@@ -12,7 +12,7 @@
         return this;
     };
     
-    jQuery.fn.lazyload.defaults = {threshold: 0};
+    $.fn.lazyload.defaults = {threshold: 0};
 
     function aboveTheFold(element, options){
         var fold = $(window).height() + $(window).scrollTop();
