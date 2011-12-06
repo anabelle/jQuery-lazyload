@@ -1,21 +1,26 @@
 # jQuery lazyload
 
-jQuery lazyload makes your site faster.
+jQuery lazyload wont make your site faster.
 
-It loads your images only when the user scrolls down the page.
+It just fades in elements when the user scrolls down the page.
 
 ## Example
 
-### Put the images that will lazy load in this way
+### Put the elements that will lazy show in this way
 
-Noscript is necessary for the browsers with JavaScript off.
+You can use modernizr or similar to add a class to your code when javascript is available. 
+
+Add this to your CSS:
 
   <pre>
     <code>
-      &lt;img class="lazy" src="placeholder.gif" original-src="original-image.jpg" /&gt;
-      &lt;noscript&gt;
-        &lt;img src="original-image.jpg" /&gt;
-      &lt;/noscript&gt;
+      .js .lazy {opacity:0;}
+    </code>
+  </pre>
+
+  <pre>
+    <code>
+      &lt;div class="lazy"&gt; Div content &lt;/div&gt;
     </code>
   </pre>
 
@@ -28,15 +33,15 @@ Noscript is necessary for the browsers with JavaScript off.
     </code>
   </pre>
 
-### Turn on lazyload for the selected images
+### Turn on lazyload for the selected elements
 
-In this case, there is a 30px threshold, so the images will load when the fold is 30px from them. The threshold is optional.
+In this case, there is a 10px threshold, so the elements will load when the fold is 10px from them. The threshold is optional.
 
   <pre>
     <code>
       &lt;script&gt;
         $(function(){
-          $('img.lazy').lazyload({threshold: 30});
+          $('div.lazy').lazyload({threshold: 10});
         });
       &lt;/script&gt;
     </code>
