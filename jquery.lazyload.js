@@ -4,10 +4,10 @@
         var elements = this;
 
         $(window).bind('scroll', function(e){
-            loadAboveTheFoldImages(elements, opts);
+            displayAboveTheFoldContent(elements, opts);
         });
 
-        loadAboveTheFoldImages(elements, opts);
+        displayAboveTheFoldContent(elements, opts);
 
         return this;
     };
@@ -19,14 +19,18 @@
         return fold >= $(element).offset().top - (options['threshold']);
     };
 
-    function loadOriginalImage(element){
-        $(element).attr('src', $(element).attr('original-src')).removeAttr('original-src');
+    function displayContent(element){
+        $(element).animate({
+            opacity: 1
+        }, 2000, function() {
+            // Animation complete.
+        });
     };
 
-    function loadAboveTheFoldImages(elements, options){
+    function displayAboveTheFoldContent(elements, options){
         elements.each(function(){
-            if (aboveTheFold(this, options) && ($(this).attr('original-src'))){
-                loadOriginalImage(this);
+            if (aboveTheFold(this, options)){
+                displayContent(this);
             }
         });
     };
